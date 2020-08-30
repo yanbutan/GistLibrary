@@ -15,7 +15,8 @@
     "react": "16.13.1",
     "react-code-blocks": "0.0.8",
     "react-dom": "16.13.1",
-    "react-helmet": "6.1.0"
+    "react-helmet": "6.1.0",
+    "superagent": "^6.0.0"
   },
   "keywords": [
     "gatsby",

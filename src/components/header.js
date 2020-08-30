@@ -52,7 +52,7 @@ function Header() {
             isExpanded ? `block` : `hidden`
           } md:block md:items-center w-full md:w-auto`}
         >
-          {[
+          {/* {[
             {
               route: `/about`,
               title: `About`,
@@ -69,7 +69,13 @@ function Header() {
             >
               {link.title}
             </Link>
-          ))}
+          ))} */}
+          <a
+            href={`https://github.com/login/oauth/authorize?client_id=f56ba0f02a8e6a969c2c`}
+            className="block mt-4 text-white no-underline md:inline-block md:mt-0 md:ml-6"
+          >
+            My Gists
+          </a>
         </nav>
       </div>
     </header>
