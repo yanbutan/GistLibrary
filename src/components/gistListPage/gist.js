@@ -128,7 +128,7 @@ const Gist = ({ data }) => {
             </svg>
             {data.comments} comments
           </a>
-          <a className="absolute right-0">
+          <a className="absolute right-0 py-1 px-2 mb-2 rounded-lg bg-teal-700 text-white text-xs text-center">
             {Object.values(data.files)[0].language}
           </a>
         </div>
@@ -140,7 +140,11 @@ const Gist = ({ data }) => {
           className="cursor-pointer hover:border-blue-600 max-h-64 w-full overflow-auto border-2 border-gray-800 shadow rounded-md py-4 px-6 text-sm"
         >
           <pre>
-            <code>{rawUrl}</code>
+            <code
+              className={`language-${Object.values(data.files)[0].language}`}
+            >
+              {rawUrl}
+            </code>
           </pre>
         </a>
       </div>
