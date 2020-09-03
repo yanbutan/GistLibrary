@@ -44,7 +44,7 @@ const Gist = ({ data }) => {
     setLoading(false);
   });
 
-  // console.log(data);
+  // console.log(Object.values(data.files)[0].language);
   if (!loading) {
     return (
       <div className="relative flex flex-col text-black my-8">
@@ -128,9 +128,11 @@ const Gist = ({ data }) => {
             </svg>
             {data.comments} comments
           </a>
-          <a className="absolute right-0 py-1 px-2 mb-2 rounded-lg bg-teal-700 text-white text-xs text-center">
-            {Object.values(data.files)[0].language}
-          </a>
+          {Object.values(data.files)[0].language !== null && (
+            <a className="absolute right-0 py-1 px-2 mb-2 rounded-lg bg-teal-700 text-white text-xs text-center">
+              {Object.values(data.files)[0].language}
+            </a>
+          )}
         </div>
         {/* <a href={data.owner.html_url} target="_blank" rel="noreferrer"></a> */}
         <a

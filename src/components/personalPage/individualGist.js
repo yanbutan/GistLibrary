@@ -69,9 +69,11 @@ export default function IndividualGist({ data }) {
           </svg>
           {data.comments} comments
         </a>
-        <a className="absolute right-0 py-1 px-2 mb-2 rounded-lg bg-teal-700 text-white text-xs text-center">
-          {Object.values(data.files)[0].language}
-        </a>
+        {Object.values(data.files)[0].language !== null && (
+          <a className="absolute right-0 py-1 px-2 mb-2 rounded-lg bg-teal-700 text-white text-xs text-center">
+            {Object.values(data.files)[0].language}
+          </a>
+        )}
       </div>
       {/* <a href={data.owner.html_url} target="_blank" rel="noreferrer"></a> */}
       <a
